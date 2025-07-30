@@ -4,7 +4,73 @@ body {
     background: #f5f6fa;
     color: #222;
 }
+/* Sidebar Container */
+    #sidebar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      width: 220px;
+      background-color: #f8f9fa;
+      padding-top: 60px;
+      border-right: 1px solid #ddd;
+      box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
 
+    /* Toggle Button */
+    #toggle-btn {
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      z-index: 999;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 10px 12px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    /* Sidebar Content */
+    .offcanvas-body a {
+      display: block;
+      padding: 12px 20px;
+      color: #6c757d;
+      text-decoration: none;
+      transition: background-color 0.2s;
+    }
+
+    .offcanvas-body a:hover {
+      background-color: #e9ecef;
+      color: #000;
+    }
+
+    .offcanvas-body i.con {
+      margin-right: 10px;
+    }
+    .offcanvas-body p {
+      margin-left: 20px;
+      font-weight: 600;
+      margin-top: 20px;
+    }
+
+    .icon-gap {
+      margin-right: 10px;
+    }
+
+    /* Hidden sidebar */
+    #sidebar.hide {
+      transform: translateX(-100%);
+    }
+
+    hr {
+      margin: 15px 0;
+      border: none;
+      border-top: 1px solid #ccc;
+      width: 80%;
+      margin-left: 10%;
+    }
 header {
     display: flex;
     justify-content: space-between;

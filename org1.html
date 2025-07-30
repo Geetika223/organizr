@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Task Manager</title>
+    <title>organizr</title>
     <link rel="stylesheet" href="org1.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
@@ -14,7 +14,34 @@
 
 <body>
     <header>
+<!-- Toggle Button -->
+<button id="toggle-btn"><i class="fas fa-bars"></i></button>
 
+<!-- Sidebar -->
+<div id="sidebar">
+  <div class="offcanvas-body">
+    <a class="iconsonbar button text-muted" href="timesheet.html">
+      <i class="con fas fa-stopwatch p-2"></i>Timesheet
+    </a>
+    <a class="iconsonbar button text-muted" href="search.html">
+      <i class="con fas fa-search p-2"></i>Search
+    </a>
+    <a class="iconsonbar button text-muted" href="task.html">
+      <i class="con fas fa-plus p-2" style="font-family: Trebuchet MS;">Add Task</i>
+    </a>
+    <p class="fw-semibold mtdd">My Tasks</p>
+    <a class="text-start iconsonbar2" href="task.html">
+      <i class="fas fa-check icon-gap"></i>All Tasks
+    </a>
+    <a class="text-start iconsonbar2" href="#">
+      <i class="fas fa-calendar icon-gap"></i>Today
+    </a>
+    <br><hr><br>
+    <a class="text-start iconsonbar2" href="help.html">
+      <i class="fas fa-question icon-gap"></i>Help & Tutorials
+    </a>
+  </div>
+</div>
         <!-- <i class="fa-solid fa-bars fa-lg "></i> -->
         <div class="logo"> <i class="fa-solid fa-bars fa-lg "></i>Organizr</div>
         <!-- <div class="logo"><img src="imgx.png" alt="Logo" style="height:50px; width:20%;"> -->
@@ -161,6 +188,12 @@
         </div>
     </footer>
     <script>
+        const toggleBtn = document.getElementById("toggle-btn");
+  const sidebar = document.getElementById("sidebar");
+
+  toggleBtn.addEventListener("click", () => {
+    sidebar.classList.toggle("hide");
+  });
         document.querySelectorAll('.btn-group').forEach(group => {
             const buttons = group.querySelectorAll('.dropdown-toggle');
             const menus = group.querySelectorAll('.dropdown-menu');
