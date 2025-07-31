@@ -53,121 +53,123 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 // ADD TASK END
 //geetika
-    document.addEventListener("DOMContentLoaded", () => {
-        //Sidebar Toggle 
-        const toggleBtn = document.getElementById("toggle-btn");
-        const sidebar = document.getElementById("sidebar");
-        const mainContent = document.getElementById("main-content");
+document.addEventListener("DOMContentLoaded", () => {
+    //Sidebar Toggle 
+    const toggleBtn = document.getElementById("toggle-btn");
+    const sidebar = document.getElementById("sidebar");
+    const mainContent = document.getElementById("main-content");
 
-        toggleBtn?.addEventListener("click", (e) => {
-            e.stopPropagation(); // prevent auto-close trigger
-            sidebar?.classList.toggle("show");
-            mainContent?.classList.toggle("shifted");
-        });
+    toggleBtn?.addEventListener("click", (e) => {
+        e.stopPropagation(); // prevent auto-close trigger
+        sidebar?.classList.toggle("show");
+        mainContent?.classList.toggle("shifted");
+    });
 
-        // Close sidebar when clicking outside
-        document.addEventListener("click", (e) => {
-            const clickedOutsideSidebar = !sidebar?.contains(e.target);
-            const clickedOutsideToggle = !toggleBtn?.contains(e.target);
-            if (clickedOutsideSidebar && clickedOutsideToggle) {
-                sidebar?.classList.remove("show");
-                mainContent?.classList.remove("shifted");
-            }
-        });
+    // Close sidebar when clicking outside
+    document.addEventListener("click", (e) => {
+        const clickedOutsideSidebar = !sidebar?.contains(e.target);
+        const clickedOutsideToggle = !toggleBtn?.contains(e.target);
+        if (clickedOutsideSidebar && clickedOutsideToggle) {
+            sidebar?.classList.remove("show");
+            mainContent?.classList.remove("shifted");
+        }
+    });
 
-         // Redirecting after login submit
-        const loginForm = document.getElementById("login-form");
+    // Redirecting after login submit
+    const loginForm = document.getElementById("login-form");
 
-        loginForm?.addEventListener("submit", function (e) {
-            e.preventDefault();
-            window.location.href = "logout.html";
-        });
+    loginForm?.addEventListener("submit", function (e) {
+        e.preventDefault();
+        window.location.href = "logout.html";
+    });
 
 
-        // Dropdowns 
-        document.querySelectorAll('.btn-group').forEach(group => {
-            const buttons = group.querySelectorAll('.dropdown-toggle');
-            const menus = group.querySelectorAll('.dropdown-menu');
+    // Dropdowns 
+    document.querySelectorAll('.btn-group').forEach(group => {
+        const buttons = group.querySelectorAll('.dropdown-toggle');
+        const menus = group.querySelectorAll('.dropdown-menu');
 
-            buttons.forEach((btn) => {
-                btn.addEventListener('click', (e) => {
-                    e.stopPropagation();
-                    menus.forEach(menu => menu.style.display = 'none');
-
-                    const targetMenu = btn.nextElementSibling;
-                    if (targetMenu?.classList.contains('dropdown-menu')) {
-                        targetMenu.style.display = (targetMenu.style.display === 'block') ? 'none' : 'block';
-                    }
-                });
-            });
-        });
-
-        // Close all dropdowns on outside click
-        document.addEventListener('click', () => {
-            document.querySelectorAll('.dropdown-menu').forEach(menu => {
-                menu.style.display = 'none';
-            });
-        });
-
-        //  Login Modal
-        document.getElementById('open-login-modal')?.addEventListener('click', () => {
-            document.getElementById('login-modal').style.display = 'flex';
-        });
-
-        document.getElementById('close-login-modal')?.addEventListener('click', () => {
-            document.getElementById('login-modal').style.display = 'none';
-        });
-
-        document.getElementById('login-modal')?.addEventListener('click', (e) => {
-            if (e.target === e.currentTarget) e.currentTarget.style.display = 'none';
-        });
-
-        //  Filter Modal
-        document.getElementById('close-filter')?.addEventListener('click', () => {
-            document.getElementById('filter').style.display = 'none';
-        });
-
-        //  Switch to Register Modal
-        document.querySelectorAll('.create-account a').forEach(link => {
-            link.addEventListener('click', (e) => {
-                e.preventDefault();
-                document.getElementById('login-modal').style.display = 'none';
-                document.getElementById('create-account-modal').style.display = 'flex';
-            });
-        });
-
-        document.getElementById('close-create-account-modal')?.addEventListener('click', () => {
-            document.getElementById('create-account-modal').style.display = 'none';
-        });
-
-        document.getElementById('create-account-modal')?.addEventListener('click', (e) => {
-            if (e.target === e.currentTarget) e.currentTarget.style.display = 'none';
-        });
-
-        document.getElementById('switch-to-login')?.addEventListener('click', (e) => {
-            e.preventDefault();
-            document.getElementById('create-account-modal').style.display = 'none';
-            document.getElementById('login-modal').style.display = 'flex';
-        });
-
-        //  Sidebar "Add Task" Button
-        document.getElementById('sidebar-add-task')?.addEventListener('click', (e) => {
-            e.preventDefault();
-            const taskForm = document.getElementById('task-form');
-            if (taskForm) {
-                taskForm.style.display = 'block';
-                window.scrollTo({
-                    top: taskForm.offsetTop - 100,
-                    behavior: 'smooth'
-                });
-            }
-        });
-
-        //  Optional: Dropdown Alert for Items 
-        document.querySelectorAll('.dropdown-item').forEach(item => {
-            item.addEventListener('click', (e) => {
+        buttons.forEach((btn) => {
+            btn.addEventListener('click', (e) => {
                 e.stopPropagation();
-                alert('Dropdown item clicked: ' + item.textContent.trim());
+                menus.forEach(menu => menu.style.display = 'none');
+
+                const targetMenu = btn.nextElementSibling;
+                if (targetMenu?.classList.contains('dropdown-menu')) {
+                    targetMenu.style.display = (targetMenu.style.display === 'block') ? 'none' : 'block';
+                }
             });
         });
     });
+
+    // Close all dropdowns on outside click
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.dropdown-menu').forEach(menu => {
+            menu.style.display = 'none';
+        });
+    });
+
+    //  Login Modal
+    document.getElementById('open-login-modal')?.addEventListener('click', () => {
+        document.getElementById('login-modal').style.display = 'flex';
+    });
+
+    document.getElementById('close-login-modal')?.addEventListener('click', () => {
+        document.getElementById('login-modal').style.display = 'none';
+    });
+
+    document.getElementById('login-modal')?.addEventListener('click', (e) => {
+        if (e.target === e.currentTarget) e.currentTarget.style.display = 'none';
+    });
+
+    //  Filter Modal
+    document.getElementById('close-filter')?.addEventListener('click', () => {
+        document.getElementById('filter').style.display = 'none';
+    });
+
+    //  Switch to Register Modal
+    document.querySelectorAll('.create-account a').forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            document.getElementById('login-modal').style.display = 'none';
+            document.getElementById('create-account-modal').style.display = 'flex';
+        });
+    });
+
+    document.getElementById('close-create-account-modal')?.addEventListener('click', () => {
+        document.getElementById('create-account-modal').style.display = 'none';
+    });
+
+    document.getElementById('create-account-modal')?.addEventListener('click', (e) => {
+        if (e.target === e.currentTarget) e.currentTarget.style.display = 'none';
+    });
+
+    document.getElementById('switch-to-login')?.addEventListener('click', (e) => {
+        e.preventDefault();
+        document.getElementById('create-account-modal').style.display = 'none';
+        document.getElementById('login-modal').style.display = 'flex';
+    });
+
+    //  Sidebar "Add Task" Button
+    document.getElementById('sidebar-add-task')?.addEventListener('click', (e) => {
+        e.preventDefault();
+        const taskForm = document.getElementById('task-form');
+        if (taskForm) {
+            taskForm.style.display = 'block';
+            window.scrollTo({
+                top: taskForm.offsetTop - 100,
+                behavior: 'smooth'
+            });
+        }
+    });
+
+    //  Optional: Dropdown Alert for Items 
+    document.querySelectorAll('.dropdown-item').forEach(item => {
+        item.addEventListener('click', (e) => {
+            e.stopPropagation();
+            alert('Dropdown item clicked: ' + item.textContent.trim());
+        });
+    });
+
+
+});
