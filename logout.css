@@ -56,6 +56,9 @@ body {
     text-decoration: none;
 }
 
+a{
+    text-decoration: none;
+}
 .offcanvas-body a:hover {
     background-color: #e9ecef;
     color: #000;
@@ -139,8 +142,9 @@ header {
 }
 
 .btn i {
-    display: inline-block;
-    vertical-align: middle;
+    /* display: inline-block; */
+    /* vertical-align: middle; */
+    text-decoration: none;
 }
 
 .btn:active {

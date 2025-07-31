@@ -103,10 +103,12 @@ header {
     gap: 0.7rem;
     width: 100%;
     margin-left: 2vw;
+    color: #a6cec2;
 }
 
 .logo i {
-    color: #00b894;
+    color: #a6cec2;
+    text-decoration-color: #a6cec2;
 
 }
 

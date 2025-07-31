@@ -100,11 +100,6 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         });
 
-        //  Login Modal
-        document.getElementById('open-login-modal')?.addEventListener('click', () => {
-            document.getElementById('login-modal').style.display = 'flex';
-        });
-
               //  Sidebar "Add Task" Button
         document.getElementById('sidebar-add-task')?.addEventListener('click', (e) => {
             e.preventDefault();

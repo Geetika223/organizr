@@ -75,6 +75,15 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
 
+         // Redirecting after login submit
+        const loginForm = document.getElementById("login-form");
+
+        loginForm?.addEventListener("submit", function (e) {
+            e.preventDefault();
+            window.location.href = "logout.html";
+        });
+
+
         // Dropdowns 
         document.querySelectorAll('.btn-group').forEach(group => {
             const buttons = group.querySelectorAll('.dropdown-toggle');
