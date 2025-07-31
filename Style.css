@@ -256,7 +256,7 @@ header {
 #task-form input[type="text"]:focus,
 #task-form input[type="date"]:focus,
 #task-form textarea:focus {
-    border-color: #007bff;
+    border-color: #00b894;
 }
 
 #task-form textarea {
@@ -267,7 +267,7 @@ header {
 #task-form button[type="submit"] {
     width: 100%;
     padding: 10px;
-    background-color: #007bff;
+    background-color: #00b894;
     border: none;
     color: #fff;
     font-size: 16px;
