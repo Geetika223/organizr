@@ -39,7 +39,7 @@ body {
     top: 15px;
     left: 15px;
     z-index: 1100;
-    background-color: #00b894;
+    background-color: #636e72;
     color: white;
     border: none;
     padding: 10px 12px;
@@ -47,7 +47,9 @@ body {
     cursor: pointer;
 }
 
-
+#toggle-btn:hover{
+    background-color: #00b894;
+}
 .offcanvas-body a {
     display: block;
     padding: 12px 20px;
@@ -74,8 +76,6 @@ body {
 .icon-gap {
     margin-right: 10px;
 }
-
-
 
 hr {
     margin: 15px 0;
@@ -476,7 +476,7 @@ header {
     color: #00b894;
 }
 
-.task-panel .task-item {
+/* .task-panel.task-item {
     background: #2d3436;
     padding: 1rem;
     border-radius: 6px;
@@ -524,7 +524,100 @@ header {
 
 .task-item .task-actions button.delete:hover {
     color: #c0392b;
+} */
+ /* Main Content Styling */
+main {
+    /* padding: 2rem; */
+    background-color: #454141;
+    width:100%;
+    min-height: 100vh;
+    font-family: 'Segoe UI', sans-serif;
+     display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
+
+/* Task Panel */
+.task-panel {
+    background: #161616;
+    padding: 2rem; 
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    width:100%;
+    margin: 0 auto;
+}
+
+/* Heading */
+.task-panel h2 {
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+/* Add Task Button */
+.add-btn {
+    background-color: #00b894;
+    color: #fff;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.add-btn:hover {
+    background-color: #04765f;
+}
+
+/* Task Form */
+#task-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#task-form input[type="text"],
+#task-form textarea,
+#task-form input[type="date"] {
+    padding: 0.75rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Submit and Action Buttons */
+#task-form button {
+    padding: 0.6rem 1.2rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#task-form button[type="submit"] {
+    background-color: #28a745;
+    color: white;
+}
+
+#task-form #create-task {
+    margin-bottom: 2rem;
+    background-color: #17a2b8;
+    color: white;
+}
+
+#task-form #delete-task {
+    background-color: #dc3545;
+    color: white;
+}
+
+#task-form button:hover {
+    opacity: 0.9;
+}
+
 
 .tm-footer {
     background: #0c0c0e;
