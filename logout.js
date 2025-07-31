@@ -105,43 +105,7 @@ document.addEventListener("DOMContentLoaded", () => {
             document.getElementById('login-modal').style.display = 'flex';
         });
 
-        document.getElementById('close-login-modal')?.addEventListener('click', () => {
-            document.getElementById('login-modal').style.display = 'none';
-        });
-
-        document.getElementById('login-modal')?.addEventListener('click', (e) => {
-            if (e.target === e.currentTarget) e.currentTarget.style.display = 'none';
-        });
-
-        //  Filter Modal
-        document.getElementById('close-filter')?.addEventListener('click', () => {
-            document.getElementById('filter').style.display = 'none';
-        });
-
-        //  Switch to Register Modal
-        document.querySelectorAll('.create-account a').forEach(link => {
-            link.addEventListener('click', (e) => {
-                e.preventDefault();
-                document.getElementById('login-modal').style.display = 'none';
-                document.getElementById('create-account-modal').style.display = 'flex';
-            });
-        });
-
-        document.getElementById('close-create-account-modal')?.addEventListener('click', () => {
-            document.getElementById('create-account-modal').style.display = 'none';
-        });
-
-        document.getElementById('create-account-modal')?.addEventListener('click', (e) => {
-            if (e.target === e.currentTarget) e.currentTarget.style.display = 'none';
-        });
-
-        document.getElementById('switch-to-login')?.addEventListener('click', (e) => {
-            e.preventDefault();
-            document.getElementById('create-account-modal').style.display = 'none';
-            document.getElementById('login-modal').style.display = 'flex';
-        });
-
-        //  Sidebar "Add Task" Button
+              //  Sidebar "Add Task" Button
         document.getElementById('sidebar-add-task')?.addEventListener('click', (e) => {
             e.preventDefault();
             const taskForm = document.getElementById('task-form');
