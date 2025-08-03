@@ -170,27 +170,6 @@ document.addEventListener("DOMContentLoaded", () => {
             alert('Dropdown item clicked: ' + item.textContent.trim());
         });
     });
-});
 
-// Search pop one
-const openSearchModal = document.getElementById('open-search-modal');
-const searchModal = document.getElementById('search-modal');
-const searchInput = document.getElementById('search-input');
 
-openSearchModal.addEventListener('click', (e) => {
-    e.preventDefault();
-    searchModal.style.display = 'flex';
-    searchInput.focus();
-});
-
-window.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') {
-        searchModal.style.display = 'none';
-    }
-});
-
-searchModal.addEventListener('click', (e) => {
-    if (e.target === searchModal) {
-        searchModal.style.display = 'none';
-    }
 });
