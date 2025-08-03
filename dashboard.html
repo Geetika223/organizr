@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login</title>
+  <link rel="stylesheet" href="dashboard.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+</head>
+<body>
+  <!-- Logo section -->
+  <header class="header">
+    <div class="logo">
+      <i class="fa-solid fa-layer-group"></i> Organizr
+    </div>
+  </header>
+
+  <!-- Main login area -->
+  <div class="container">
+    <div class="box">
+      <img src="login1.png" class="img1" alt="Login Illustration" />
+    </div>
+    <div class="box2">
+      <h1>Welcome!</h1>
+      <p>Manage your tasks with Organizr</p>
+      <div class="btn-group">
+       <button id="open-login-modal" class="btn login-btn">Sign In to Dashboard</button>
+         <div id="login-modal" class="modal-overlay" style="display:none;">
+                        <div class="modal-content">
+                            <span class="close-modal" id="close-login-modal">&times;</span>
+                            <h1>Organizr</h1>
+                            <h4>Sign in to Organizr</h4>
+                            <form id="login-form">
+                                <label for="login-email">Email</label>
+                                <input type="email" id="login-email" placeholder="Enter your email" required>
+                                <label for="login-password">Password</label>
+                                <input type="password" id="login-password" placeholder="Enter your password" required>
+                                <button type="submit" class="add-btn" style="width:100%;margin-bottom: 1.5rem;">Login
+                                </button>
+                                <label class="remember-me">
+                                    <input type="checkbox" id="remember-me">Remember me</label>
+                                <p class="forgot-password"><a href="#">Forgot Password?</a></p>
+                                <p class="create-account">Don't have an account? <a href="#">Create Account</a></p>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- LOGIN PAGE END -->
+                    <!-- REGISTRATION PAGE START -->
+                    <div id="create-account-modal" class="modal-overlay" style="display:none;">
+                        <div class="modal-content">
+                            <span class="close-modal" id="close-create-account-modal">&times;</span>
+                            <h1>Organizr</h1>
+                            <h4>Create a new account</h4>
+                            <form id="register-form">
+                                <label for="register-name">Full Name</label>
+                                <input type="text" id="register-name" placeholder="Enter your full name" required>
+                                <label for="register-email">Email</label>
+                                <input type="email" id="register-email" placeholder="Enter your email" required>
+                                <label for="register-password">Password</label>
+                                <input type="password" id="register-password" placeholder="Create a password" required>
+                                <label for="register-confirm-password">Confirm Password</label>
+                                <input type="password" id="register-confirm-password"
+                                    placeholder="Confirm your password" required>
+                                <button type="submit" class="add-btn" style="width:100%; margin-bottom: 1.5rem;">Create
+                                    Account</button>
+                                <p class="forgot-password">Already have an account? <a href="#"
+                                        id="switch-to-login">Sign
+                                        in</a></p>
+                            </form>
+                        </div>
+                    </div>
+        <a href="index.html" class="btn demo-btn">Take Free Demo</a>
+      </div>
+    </div>
+  </div>
+  <script>
+    //  Login Modal
+    document.getElementById('open-login-modal')?.addEventListener('click', () => {
+    document.getElementById('login-modal').style.display = 'flex';
+});
+
+    document.getElementById('close-login-modal')?.addEventListener('click', () => {
+        document.getElementById('login-modal').style.display = 'none';
+    });
+
+    document.getElementById('login-modal')?.addEventListener('click', (e) => {
+        if (e.target === e.currentTarget) e.currentTarget.style.display = 'none';
+    });
+ //  Switch to Register Modal
+    document.querySelectorAll('.create-account a').forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            document.getElementById('login-modal').style.display = 'none';
+            document.getElementById('create-account-modal').style.display = 'flex';
+        });
+    });
+
+    document.getElementById('close-create-account-modal')?.addEventListener('click', () => {
+        document.getElementById('create-account-modal').style.display = 'none';
+    });
+
+    document.getElementById('create-account-modal')?.addEventListener('click', (e) => {
+        if (e.target === e.currentTarget) e.currentTarget.style.display = 'none';
+    });
+
+    document.getElementById('switch-to-login')?.addEventListener('click', (e) => {
+        e.preventDefault();
+        document.getElementById('create-account-modal').style.display = 'none';
+        document.getElementById('login-modal').style.display = 'flex';
+    });
+    
+  </script>
+</body>
+</html>
