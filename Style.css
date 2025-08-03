@@ -376,10 +376,7 @@ header {
 
 .modal-overlay {
     position: fixed;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
+    inset: 0;
     background: rgba(0, 0, 0, 0.5);
     display: flex;
     align-items: center;
@@ -399,6 +396,7 @@ header {
     flex-direction: column;
     gap: 1rem;
     height: auto;
+    inset: 0;
 }
 
 .close-modal {
@@ -410,6 +408,7 @@ header {
     cursor: pointer;
     font-weight: bold;
     transition: color 0.2s;
+    background: transparent;
 }
 
 .close-modal:hover {
@@ -477,6 +476,8 @@ header {
 .modal-content a:hover {
     color: #00b894;
 }
+
+
 
 /* .task-panel.task-item {
     background: #2d3436;
@@ -696,6 +697,54 @@ main {
 
 .tm-social a:hover {
     color: #a6cec2;
+}
+
+/* Search Modal Overlay */
+.custom-search-modal {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+}
+
+/* Search Box Container */
+.custom-search-box {
+    background-color: #1e1e1e;
+    padding: 1rem 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+}
+
+/* Search Icon */
+.search-icon {
+    color: #00bcd4;
+    font-size: 1.2rem;
+    margin-right: 0.75rem;
+}
+
+/* Search Input */
+#search-input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #f1f1f1;
+    font-size: 1.1rem;
+    padding: 0.5rem 0;
+    caret-color: #00bcd4;
+}
+
+#search-input::placeholder {
+    color: #888;
 }
 
 @media (max-width: 768px) {
