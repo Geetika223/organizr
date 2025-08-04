@@ -433,6 +433,8 @@ main {
     gap: 1rem;
     height: auto;
     inset: 0;
+    max-height: 90vh;
+  overflow-y: auto;
 }
 
 .close-modal {
@@ -487,7 +489,8 @@ main {
 }
 
 .modal-content input[type="email"],
-.modal-content input[type="password"] {
+.modal-content input[type="password"],
+.modal-content input[type="text"] {
     width: 100%;
     padding: 0.5rem;
     margin-bottom: 1.5rem;
@@ -498,7 +501,8 @@ main {
 }
 
 .modal-content input[type="email"]:focus,
-.modal-content input[type="password"]:focus {
+.modal-content input[type="password"]:focus,
+.modal-content input[type="text"]:focus {
     border-color: #00b894;
     outline: none;
 }
@@ -512,9 +516,6 @@ main {
 .modal-content a:hover {
     color: #00b894;
 }
-
-
- 
 
 .tm-footer {
     background: #0c0c0e;
@@ -656,4 +657,7 @@ main {
     .tm-social {
         margin-top: 1rem;
     }
+}
+.no-scroll {
+  overflow: hidden;
 }

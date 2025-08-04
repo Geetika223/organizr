@@ -11,7 +11,6 @@ body {
   min-height: 100vh;
 }
 
-/* Logo/Header */
 .header {
   width: 100%;
   padding: 1rem 2rem;
@@ -27,7 +26,6 @@ body {
   color: #00b894;
 }
 
-/* Main container */
 .container {
   display: flex;
   justify-content: space-between;
@@ -39,7 +37,7 @@ body {
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-  margin: 6rem auto 0 auto; /* added top margin to clear header */
+  margin: 6rem auto 0 auto; 
 }
 
 .box {
@@ -82,7 +80,25 @@ body {
   display: flex;
   gap: 1rem;
 }
+.add-btn {
+    background: #00b894;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1.1rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s;
+    align-self: flex-start;
+}
 
+.add-btn:hover {
+    background: #098c6e;
+}
+
+.add-btn:active {
+    background: #007a63;
+}
 .btn {
   display: inline-block;
   text-align: center;
@@ -113,7 +129,35 @@ body {
   background-color: #00b894;
   color: white;
 }
+.btn-outline-success.me-2 {
+    display: flex;
+    align-items: flex-end;
+    gap: 0.5rem;
+    margin-left: 1.5rem;
+    padding: 0.5rem 1.2rem;
+    border: 2px solid #00b894;
+    background: transparent;
+    color: #00b894;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+.no-scroll {
+  overflow: hidden;
+}
 
+.btn-outline-success.me-2:hover,
+.btn-outline-success.me-2:focus {
+    background: #098c6e;
+    color: #fff;
+    border-color: #00b894;
+    outline: none;
+}
+
+.btn-outline-success.me-2 i {
+    font-size: 1.2em;
+}
 .modal-overlay {
     position: fixed;
     inset: 0;
@@ -129,7 +173,7 @@ body {
     background: #353434;
     padding: 2rem 2rem 1.5rem 2rem;
     border-radius: 8px;
-    width: 400px;
+    width: 475px;
     position: relative;
     box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15);
     display: flex;
@@ -137,6 +181,8 @@ body {
     gap: 1rem;
     height: auto;
     inset: 0;
+    max-height: 90vh;
+  overflow-y: auto;
 }
 
 .close-modal {
@@ -191,7 +237,8 @@ body {
 }
 
 .modal-content input[type="email"],
-.modal-content input[type="password"] {
+.modal-content input[type="password"],
+.modal-content input[type="text"] {
     width: 100%;
     padding: 0.5rem;
     margin-bottom: 1.5rem;
@@ -202,7 +249,8 @@ body {
 }
 
 .modal-content input[type="email"]:focus,
-.modal-content input[type="password"]:focus {
+.modal-content input[type="password"]:focus,
+.modal-content input[type="text"] :focus{
     border-color: #00b894;
     outline: none;
 }
@@ -244,6 +292,10 @@ body {
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
-  justify-content: flex-start; /* or 'center' if you prefer */
+  justify-content: flex-start;
   align-items: center;
+}
+
+.add-btn{
+  border: 2px solid #00b894; 
 }

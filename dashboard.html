@@ -114,7 +114,61 @@
         document.getElementById('create-account-modal').style.display = 'none';
         document.getElementById('login-modal').style.display = 'flex';
     });
-    
+    // Utility functions to disable/enable background scroll
+function disableBodyScroll() {
+    document.body.classList.add('no-scroll');
+}
+
+function enableBodyScroll() {
+    document.body.classList.remove('no-scroll');
+}
+
+// On open
+document.querySelectorAll('.create-account a').forEach(link => {
+    link.addEventListener('click', (e) => {
+        e.preventDefault();
+        document.getElementById('login-modal').style.display = 'none';
+        document.getElementById('create-account-modal').style.display = 'flex';
+        disableBodyScroll();
+    });
+});
+
+document.getElementById('switch-to-login')?.addEventListener('click', (e) => {
+    e.preventDefault();
+    document.getElementById('create-account-modal').style.display = 'none';
+    document.getElementById('login-modal').style.display = 'flex';
+    disableBodyScroll();
+});
+
+document.getElementById('close-create-account-modal')?.addEventListener('click', () => {
+    document.getElementById('create-account-modal').style.display = 'none';
+    enableBodyScroll();
+});
+
+document.getElementById('create-account-modal')?.addEventListener('click', (e) => {
+    if (e.target === e.currentTarget) {
+        e.currentTarget.style.display = 'none';
+        enableBodyScroll();
+    }
+});
+
+document.getElementById('open-login-modal')?.addEventListener('click', () => {
+    document.getElementById('login-modal').style.display = 'flex';
+    disableBodyScroll();
+});
+
+document.getElementById('close-login-modal')?.addEventListener('click', () => {
+    document.getElementById('login-modal').style.display = 'none';
+    enableBodyScroll();
+});
+
+document.getElementById('login-modal')?.addEventListener('click', (e) => {
+    if (e.target === e.currentTarget) {
+        e.currentTarget.style.display = 'none';
+        enableBodyScroll();
+    }
+});
+
   </script>
 </body>
 </html>
