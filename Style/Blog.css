@@ -12,7 +12,7 @@ body {
 }
 
 .blog-header {
-    background-color: #0d6efd;
+    background-color: #000000;
     color: #fff;
     padding: 3rem 2rem;
     text-align: center;
@@ -34,7 +34,7 @@ body {
     margin: auto;
     background-color: #ffffff;
     border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .blog-content section {
@@ -42,13 +42,13 @@ body {
 }
 
 .blog-content h2 {
-    color: #0d6efd;
+    color: #2563eb;
     margin-bottom: 0.5rem;
     font-size: 1.4rem;
 }
 
 .tm-footer {
-    background-color: #0d1b2a;
+    background-color: #000000;
     color: #ccc;
     padding: 2rem 1rem 1rem;
     margin-top: 3rem;
@@ -116,7 +116,6 @@ body {
     color: #0d6efd;
 }
 
-/* Responsive */
 @media screen and (max-width: 768px) {
     .container {
         flex-direction: column;

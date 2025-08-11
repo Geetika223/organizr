@@ -27,32 +27,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 });
             });
     }
-    taskForm.addEventListener("submit", e => {
-        e.preventDefault();
-        const formData = new FormData();
-        formData.append("title", document.getElementById("title").value);
-        formData.append("description", document.getElementById("description").value);
-        formData.append("due_date", document.getElementById("due_date").value);
-        fetch("add_task.php", {
-            method: "POST",
-            body: formData
-        })
-            .then(res => res.text())
-            .then(response => {
-                if (response.trim() === "added") {
-                    alert("Task added successfully.");
-                    taskForm.reset();
-                    taskForm.style.display = "none";
-                    loadTasks();
-                } else {
-                    alert("Error adding task.");
-                }
-            });
-    });
     loadTasks();
 });
 // ADD TASK END
-//geetika
 document.addEventListener("DOMContentLoaded", () => {
     //Sidebar Toggle 
     const toggleBtn = document.getElementById("toggle-btn");

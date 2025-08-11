@@ -1,3 +1,25 @@
+<?php
+$insert = false;
+if (isset($_POST["name"])) {
+    $server = "localhost";
+    $username = "root";
+    $password = "";
+    $con = mysqli_connect($server, $username, $password);
+    if (!$con) {
+        die("Connection to this database failed due to" . mysqli_connect_error());
+    }
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $message = $_POST['message'];
+    $sql = "INSERT INTO `organizr`.`contact` (`Name`, `Email`, `Message`) VALUES ('$name', '$email', '$message')";
+    if ($con->query($sql) == true) {
+        $insert = true;
+    } else {
+        echo "ERROR: $sql <br> $con->error";
+    }
+    $con->close();
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,7 +27,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact Us | Organizr</title>
-    <link rel="stylesheet" href="Contact.css" />
+    <link rel="stylesheet" href="Style/Contact.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
 
@@ -31,7 +53,7 @@
 
         <section class="contact-form">
             <h2><i class="fas fa-paper-plane"></i> Send a Message</h2>
-            <form>
+            <form action="Contact.php" method="post">
                 <label for="name">Your Name</label>
                 <input type="text" id="name" name="name" required>
 
@@ -40,8 +62,13 @@
 
                 <label for="message">Message</label>
                 <textarea id="message" name="message" rows="5" required></textarea>
-
                 <button type="submit" class="submit-btn">Send Message</button>
+
+                <?php
+                if ($insert == true) {
+                    echo '<p> Thank You For Contacting Us.</p>';
+                }
+                ?>
             </form>
         </section>
     </main>
@@ -52,16 +79,18 @@
                 <i class="fa-solid fa-layer-group"></i> Organizr
             </div>
             <div class="tm-col">
-                <h4>Company</h4>
-                <a href="AboutUs.html">About Us</a>
-                <a href="Careers.html">Careers</a>
+                <a href="Home.php">
+                    <h4> Home</h4>
+                </a>
+                <a href="About_Us.html">About Us</a>
                 <a href="Blog.html">Blog</a>
+                <a href="Careers.html">Careers</a>
             </div>
             <div class="tm-col">
                 <h4>Support</h4>
-                <a href="HelpCentre.html">Help Center</a>
-                <a href="Contact.html">Contact</a>
-                <a href="PrivacyPolicy.html">Privacy Policy</a>
+                <a href="Contact.php">Contact</a>
+                <a href="Help_Centre.html">Help Center</a>
+                <a href="Privacy_Policy.html">Privacy Policy</a>
             </div>
         </div>
         <div class="tm-footer-bottom container">
