@@ -7,13 +7,13 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
-    background-color: #f7f9fc;
+    background-color: rgb(43, 42, 42);
     color: #333;
 }
 
 a {
     text-decoration: none;
-    color: #0066cc;
+    color: #00b894;
 }
 
 a:hover {
@@ -26,6 +26,9 @@ a:hover {
     margin: auto;
 }
 
+.container p{
+    color: white;
+}
 .main-header {
     background-color: #000000;
     color: #fff;
@@ -49,13 +52,13 @@ a:hover {
 .about h2 {
     font-size: 2rem;
     margin-bottom: 1rem;
-    color: #0066cc;
+    color: #00b894;
 }
 
 .about h3 {
     margin-top: 2rem;
     font-size: 1.5rem;
-    color: #0066cc;
+    color: #00b894;
 }
 
 .about p {
@@ -72,7 +75,7 @@ a:hover {
 
 .about ul li {
     background: #e6f0ff;
-    border-left: 4px solid #0066cc;
+    border-left: 4px solid #00b894;
     padding: 0.75rem 1rem;
     margin-bottom: 0.5rem;
     font-size: 1rem;
@@ -144,7 +147,7 @@ a:hover {
 }
 
 .about-container {
-    color: #0066cc;
+    color: #00b894;
 }
 
 @media (max-width: 768px) {

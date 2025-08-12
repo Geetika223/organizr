@@ -6,7 +6,7 @@
 
 body {
     font-family: 'Inter', sans-serif;
-    background-color: #f9f9fb;
+    background-color: rgb(43, 42, 42);
     color: #333;
     line-height: 1.6;
     font-size: 16px;
@@ -36,7 +36,8 @@ body {
 }
 
 .tm-section {
-    background-color: #fff;
+    background-color: black;
+    color: white;
     border-radius: 8px;
     padding: 2rem;
     margin-bottom: 2rem;
@@ -44,7 +45,7 @@ body {
 }
 
 .tm-section h2 {
-    color: #2e5cb8;
+    color: #00b894;
     margin-bottom: 1.2rem;
     font-size: 1.6rem;
     display: flex;
@@ -68,12 +69,12 @@ body {
     content: "•";
     position: absolute;
     left: 0;
-    color: #2e5cb8;
+    color: #00b894;
     font-weight: bold;
 }
 
 .tm-section i {
-    color: #2e5cb8;
+    color: #00b894;
     margin-right: 0.4rem;
 }
 
@@ -83,7 +84,7 @@ body {
 }
 
 a {
-    color: #2e5cb8;
+    color: #00b894;
     text-decoration: none;
 }
 

@@ -6,7 +6,7 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f9f9fb;
+    background-color: rgb(43, 42, 42);
     color: #333;
     line-height: 1.6;
 }
@@ -15,16 +15,17 @@ body {
     max-width: 800px;
     margin: 40px auto;
     padding: 20px;
-    background-color: #fff;
+    background-color: black;
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+    color: white;
 }
 
 .policy-container h1 {
     text-align: center;
     font-size: 2.5em;
     margin-bottom: 10px;
-    color: #000000;
+    color: white;
 }
 
 .policy-container .effective-date {
@@ -39,7 +40,7 @@ body {
 
 .policy-container h2 {
     font-size: 1.5em;
-    color: #2d89ef;
+    color: #00b894;
     margin-bottom: 10px;
 }
 
@@ -53,7 +54,7 @@ body {
 }
 
 .policy-container a {
-    color: #1e88e5;
+    color: #00b894;
     text-decoration: none;
 }
 

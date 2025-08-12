@@ -7,8 +7,8 @@
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
-  color: #333;
-  background-color: #f9f9f9;
+  color: white;
+  background-color: rgb(43, 42, 42);
 }
 
 .container {
@@ -42,7 +42,7 @@ body {
 }
 
 .career-content h2 {
-  color: #2563eb;
+  color: #00b894;
   margin-bottom: 1rem;
   font-size: 1.8rem;
 }
@@ -51,6 +51,11 @@ body {
 .career-content li {
   font-size: 1rem;
   margin-bottom: 0.5rem;
+  color: white;
+}
+
+.career-content h3{
+  color: #00b894;
 }
 
 .career-list {
@@ -60,9 +65,9 @@ body {
 }
 
 .career-item {
-  background-color: #ffffff;
+  background-color: black;
   padding: 1rem 1.2rem;
-  border-left: 4px solid #2563eb;
+  border-left: 4px solid #00b894;
   border-radius: 6px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
@@ -70,7 +75,7 @@ body {
 .career-item h3 {
   font-size: 1.2rem;
   margin-bottom: 0.5rem;
-  color: #222;
+  color: #00b894;
 }
 
 .skills,
@@ -84,7 +89,7 @@ body {
 .skills li,
 .industries li {
   background-color: #e0e7ff;
-  color: #1e3a8a;
+  color: black;
   padding: 0.5rem 1rem;
   border-radius: 20px;
   font-size: 0.95rem;
