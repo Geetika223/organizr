@@ -50,7 +50,7 @@ $result = mysqli_query($con, $sql);
     <title>Manage Tasks | Organizr</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossorigin="anonymous" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="Style/Timesheet.css" />
+    <link rel="stylesheet" href="Timesheet.css" />
 </head>
 
 <body>
@@ -184,6 +184,8 @@ $result = mysqli_query($con, $sql);
             });
         });
     </script>
+    <script src="sidebar.js"></script>
+
 </body>
 
 </html>

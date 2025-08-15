@@ -35,7 +35,7 @@ if (isset($_GET['search']) && !empty(trim($_GET['search']))) {
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>All Tasks - Organizr</title>
-    <link rel="stylesheet" href="Style/Search.css">
+    <link rel="stylesheet" href="Search.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         crossorigin="anonymous" />
 </head>
@@ -149,13 +149,7 @@ if (isset($_GET['search']) && !empty(trim($_GET['search']))) {
             </div>
         </footer>
     </div>
-
-    <script>
-        document.getElementById("toggle-btn").addEventListener("click", function() {
-            document.getElementById("sidebar").classList.toggle("hide");
-        });
-    </script>
-
+    <script src="sidebar.js"></script>
     <?php
     if (isset($stmt)) {
         mysqli_stmt_close($stmt);

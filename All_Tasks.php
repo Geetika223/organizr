@@ -59,80 +59,57 @@ $result = mysqli_query($con, $sql);
             <div class="task-panel">
                 <h2>All Tasks</h2>
                 <?php if (mysqli_num_rows($result) > 0): ?>
-                <ul class="task-list">
-                    <?php while ($row = mysqli_fetch_assoc($result)): ?>
-                    <li class="task-item">
-                        <h3><?= htmlspecialchars($row['Title']) ?></h3>
-                        <p><?= nl2br(htmlspecialchars($row['Description'])) ?></p>
-                        <small>Due: <?= htmlspecialchars($row['Date']) ?></small>
-                    </li>
-                    <?php endwhile; ?>
-                </ul>
+                    <ul class="task-list">
+                        <?php while ($row = mysqli_fetch_assoc($result)): ?>
+                            <li class="task-item">
+                                <h3><?= htmlspecialchars($row['Title']) ?></h3>
+                                <p><?= nl2br(htmlspecialchars($row['Description'])) ?></p>
+                                <small>Due: <?= htmlspecialchars($row['Date']) ?></small>
+                            </li>
+                        <?php endwhile; ?>
+                    </ul>
                 <?php else: ?>
-                <p>No tasks found.</p>
+                    <p>No tasks found.</p>
                 <?php endif; ?>
                 <?php mysqli_close($con); ?>
             </div>
         </main>
 
         <footer class="tm-footer">
-                <div class="tm-footer-main">
-                    <div class="tm-footer-left">
-                        <div class="tm-logo">
-                            <i class="fa-solid fa-layer-group"></i> Organizr
-                        </div>
-                    </div>
-                    <div class="tm-footer-links">
-                        <div class="tm-col">
-                            <a href="Home.php">
-                                <h4>Home</h4><br>
-                            </a>
-                            <a href="About_Us.html">About us</a><br>
-                            <a href="Blog.html">Blog</a><br>
-                            <a href="Careers.html">Careers</a>
-                        </div>
-                        <div class="tm-col">
-                            <h4>Support</h4><br>
-                            <a href="Contact.php">Contact</a><br>
-                            <a href="Help_Centre.html">Help Center</a><br>
-                            <a href="Privacy_Policy.html">Privacy Policy</a>
-                        </div>
+            <div class="tm-footer-main">
+                <div class="tm-footer-left">
+                    <div class="tm-logo">
+                        <i class="fa-solid fa-layer-group"></i> Organizr
                     </div>
                 </div>
-                <div class="tm-footer-right">
-                    <p>&copy; 2025 tm. All rights reserved.</p>
-                    <div class="tm-social">
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                <div class="tm-footer-links">
+                    <div class="tm-col">
+                        <a href="Home.php">
+                            <h4>Home</h4><br>
+                        </a>
+                        <a href="About_Us.html">About us</a><br>
+                        <a href="Blog.html">Blog</a><br>
+                        <a href="Careers.html">Careers</a>
+                    </div>
+                    <div class="tm-col">
+                        <h4>Support</h4><br>
+                        <a href="Contact.php">Contact</a><br>
+                        <a href="Help_Centre.html">Help Center</a><br>
+                        <a href="Privacy_Policy.html">Privacy Policy</a>
                     </div>
                 </div>
+            </div>
+            <div class="tm-footer-right">
+                <p>&copy; 2025 tm. All rights reserved.</p>
+                <div class="tm-social">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
         </footer>
     </div>
-
-    <script>
-    //Sidebar Toggle 
-    const toggleBtn = document.getElementById("toggle-btn");
-    const sidebar = document.getElementById("sidebar");
-    const mainContent = document.getElementById("main-content");
-
-    toggleBtn?.addEventListener("click", (e) => {
-        e.stopPropagation(); // prevent auto-close trigger
-        sidebar?.classList.toggle("show");
-        mainContent?.classList.toggle("shifted");
-    });
-
-    // Close sidebar when clicking outside
-    document.addEventListener("click", (e) => {
-        const clickedOutsideSidebar = !sidebar?.contains(e.target);
-        const clickedOutsideToggle = !toggleBtn?.contains(e.target);
-        if (clickedOutsideSidebar && clickedOutsideToggle) {
-            sidebar?.classList.remove("show");
-            mainContent?.classList.remove("shifted");
-        }
-    });
-    </script>
-
+    <script src="sidebar.js"></script>
 </body>
 
 </html>

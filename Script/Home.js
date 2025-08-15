@@ -31,26 +31,26 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 // ADD TASK END
 document.addEventListener("DOMContentLoaded", () => {
-    //Sidebar Toggle 
-    const toggleBtn = document.getElementById("toggle-btn");
-    const sidebar = document.getElementById("sidebar");
-    const mainContent = document.getElementById("main-content");
+    // //Sidebar Toggle 
+    // const toggleBtn = document.getElementById("toggle-btn");
+    // const sidebar = document.getElementById("sidebar");
+    // const mainContent = document.getElementById("main-content");
 
-    toggleBtn?.addEventListener("click", (e) => {
-        e.stopPropagation(); // prevent auto-close trigger
-        sidebar?.classList.toggle("show");
-        mainContent?.classList.toggle("shifted");
-    });
+    // toggleBtn?.addEventListener("click", (e) => {
+    //     e.stopPropagation(); // prevent auto-close trigger
+    //     sidebar?.classList.toggle("show");
+    //     mainContent?.classList.toggle("shifted");
+    // });
 
-    // Close sidebar when clicking outside
-    document.addEventListener("click", (e) => {
-        const clickedOutsideSidebar = !sidebar?.contains(e.target);
-        const clickedOutsideToggle = !toggleBtn?.contains(e.target);
-        if (clickedOutsideSidebar && clickedOutsideToggle) {
-            sidebar?.classList.remove("show");
-            mainContent?.classList.remove("shifted");
-        }
-    });
+    // // Close sidebar when clicking outside
+    // document.addEventListener("click", (e) => {
+    //     const clickedOutsideSidebar = !sidebar?.contains(e.target);
+    //     const clickedOutsideToggle = !toggleBtn?.contains(e.target);
+    //     if (clickedOutsideSidebar && clickedOutsideToggle) {
+    //         sidebar?.classList.remove("show");
+    //         mainContent?.classList.remove("shifted");
+    //     }
+    // });
 
     // Redirecting after login submit
     const loginForm = document.getElementById("login-form");

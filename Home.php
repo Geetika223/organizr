@@ -146,7 +146,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Organizr - Add Tasks</title>
-    <link rel="stylesheet" href="Style/Home.css" />
+    <link rel="stylesheet" href="Home.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
@@ -255,7 +255,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 </form>
             </div>
         </main>
-
+        <!-- footer -->
         <footer class="tm-footer">
             <div class="tm-footer-main">
                 <div class="tm-logo">
@@ -329,6 +329,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </div>
     </div>
     <script src="Script/Home.js"></script>
+    <script src="sidebar.js"></script>
     <?php close_resources(null, $con); ?>
 </body>
 

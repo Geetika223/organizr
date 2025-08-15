@@ -530,7 +530,7 @@ main {
 .modal-content a:hover {
     color: #00b894;
 }
-
+/*footer*/
 .tm-footer {
     background: #0c0c0e;
     color: #f7f3ea;
@@ -639,7 +639,6 @@ main {
         margin-top: 1rem;
     }
 }
-
 
 /* Search Modal Overlay */
 .custom-search-modal {
