@@ -74,32 +74,28 @@ $result = mysqli_query($con, $sql);
                 <?php mysqli_close($con); ?>
             </div>
         </main>
-
+        <!-- footer -->
         <footer class="tm-footer">
             <div class="tm-footer-main">
-                <div class="tm-footer-left">
-                    <div class="tm-logo">
-                        <i class="fa-solid fa-layer-group"></i> Organizr
-                    </div>
+                <div class="tm-logo">
+                    <i class="fa-solid fa-layer-group"></i>Organizr
                 </div>
-                <div class="tm-footer-links">
-                    <div class="tm-col">
-                        <a href="Home.php">
-                            <h4>Home</h4><br>
-                        </a>
-                        <a href="About_Us.html">About us</a><br>
-                        <a href="Blog.html">Blog</a><br>
-                        <a href="Careers.html">Careers</a>
-                    </div>
-                    <div class="tm-col">
-                        <h4>Support</h4><br>
-                        <a href="Contact.php">Contact</a><br>
-                        <a href="Help_Centre.html">Help Center</a><br>
-                        <a href="Privacy_Policy.html">Privacy Policy</a>
-                    </div>
+                <div class="tm-col">
+                    <a href="Home.php">
+                        <h4>Home</h4><br>
+                    </a>
+                    <a href="About_Us.html">About us</a><br>
+                    <a href="Blog.html">Blog</a><br>
+                    <a href="Careers.html">Careers</a><br>
+                </div>
+                <div class="tm-col">
+                    <h4>Support</h4><br>
+                    <a href="Contact.php">Contact</a><br>
+                    <a href="Help_Centre.html">Help Center</a><br>
+                    <a href="Privacy_Policy.html">Privacy Policy</a>
                 </div>
             </div>
-            <div class="tm-footer-right">
+            <div class="tm-footer-bottom">
                 <p>&copy; 2025 tm. All rights reserved.</p>
                 <div class="tm-social">
                     <a href="#"><i class="fab fa-twitter"></i></a>
@@ -109,7 +105,30 @@ $result = mysqli_query($con, $sql);
             </div>
         </footer>
     </div>
-    <script src="sidebar.js"></script>
+
+    <script>
+        //Sidebar Toggle 
+        const toggleBtn = document.getElementById("toggle-btn");
+        const sidebar = document.getElementById("sidebar");
+        const mainContent = document.getElementById("main-content");
+
+        toggleBtn?.addEventListener("click", (e) => {
+            e.stopPropagation(); // prevent auto-close trigger
+            sidebar?.classList.toggle("show");
+            mainContent?.classList.toggle("shifted");
+        });
+
+        // Close sidebar when clicking outside
+        document.addEventListener("click", (e) => {
+            const clickedOutsideSidebar = !sidebar?.contains(e.target);
+            const clickedOutsideToggle = !toggleBtn?.contains(e.target);
+            if (clickedOutsideSidebar && clickedOutsideToggle) {
+                sidebar?.classList.remove("show");
+                mainContent?.classList.remove("shifted");
+            }
+        });
+    </script>
+
 </body>
 
 </html>

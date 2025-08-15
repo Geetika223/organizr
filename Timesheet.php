@@ -115,7 +115,7 @@ $result = mysqli_query($con, $sql);
     </div>
     <footer class="tm-footer">
         <div class="tm-footer-main">
-            <div class="tm-logo"><i class="fa-solid fa-layer-group"></i> Organizr</div>
+            <div class="tm-logo"><i class="fa-solid fa-layer-group"></i>Organizr</div>
             <div class="tm-col">
                 <a href="Home.php">
                     <h4>Home</h4>

@@ -10,87 +10,88 @@ body {
 
 /* Sidebar Styling */
 #sidebar {
-    width: 250px;
-    height: 100vh;
-    background-color: #f8f9fa;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
     position: fixed;
     top: 0;
     left: 0;
-    transition: transform 0.3s ease-in-out;
-    padding: 20px;
-    box-sizing: border-box;
+    height: 100%;
+    width: 220px;
+    background-color: #f8f9fa;
+    padding-top: 60px;
+    border-right: 1px solid #ddd;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
     z-index: 1000;
+}
+
+.info-line{
+    color: white;
 }
 
 #sidebar.hide {
     transform: translateX(-100%);
 }
 
+#main-content {
+    transition: transform 0.3s ease;
+}
+
+#main-content.shifted {
+    transform: translateX(250px);
+}
+
+#sidebar.show {
+    transform: translateX(0);
+}
+
 #toggle-btn {
-    position: fixed;
-    top: 15px;
-    left: 15px;
-    background-color: #00b894;
-    color: #f8f9fa;
+    position: absolute;
+    top: 0.25rem;
+    left:1rem;
+    z-index: 1100;
+    background-color: transparent;
+    color: white;
     border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
+    padding: 10px 12px;
+    border-radius: 4px;
     cursor: pointer;
-    z-index: 1001; /* Ensure button is always on top */
+}
+
+#toggle-btn:hover {
+    background-color: #00b894;
 }
 
 .offcanvas-body h1 {
-    font-size: 1.2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 0;
+}
+
+.offcanvas-body a {
+    display: block;
+    padding: 12px 20px;
+    color: #6c757d;
+    transition: background-color 0.2s;
+    text-decoration: none;
+}
+
+.offcanvas-body a:hover {
+    background-color: #e9ecef;
+    color: #000;
+}
+
+.offcanvas-body i.con {
+    margin-right: 10px;
+}
+
+.offcanvas-body p {
+    margin-left: 20px;
     font-weight: 600;
-    color: #00b894;
-    margin-bottom: 30px;
-}
-
-.offcanvas-body h1 i {
-    margin-right: 10px;
-}
-
-.iconsonbar {
-    display: block;
-    padding: 10px 15px;
-    text-decoration: none;
-    color: #555;
-    transition: background-color 0.2s, color 0.2s;
-    border-radius: 5px;
-    margin-bottom: 5px;
-}
-
-.iconsonbar:hover {
-    background-color: #e9ecef;
-    color: #000;
-}
-
-.iconsonbar i {
-    margin-right: 10px;
-}
-
-.mtdd {
-    font-size: 0.9rem;
-    color: #888;
     margin-top: 20px;
-    margin-bottom: 10px;
-    padding-left: 15px;
 }
 
-.iconsonbar2 {
-    display: block;
-    padding: 10px 15px;
-    text-decoration: none;
-    color: #555;
-    border-radius: 5px;
-    transition: background-color 0.2s, color 0.2s;
+.icon-gap {
+    margin-right: 10px;
 }
 
-.iconsonbar2:hover {
-    background-color: #e9ecef;
-    color: #000;
-}
 
 /* Main Wrapper and Content */
 .main-wrapper {

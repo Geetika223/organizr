@@ -259,7 +259,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <footer class="tm-footer">
             <div class="tm-footer-main">
                 <div class="tm-logo">
-                    <i class="fa-solid fa-layer-group"></i> Organizr
+                    <i class="fa-solid fa-layer-group"></i>Organizr
                 </div>
                 <div class="tm-col">
                     <a href="Home.php">
