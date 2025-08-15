@@ -263,7 +263,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 </div>
                 <div class="tm-col">
                     <a href="Home.php">
-                        <h4>Home</h4>
+                        <h4>Home</h4><br>
                     </a>
                     <a href="About_Us.html">About us</a><br>
                     <a href="Blog.html">Blog</a><br>

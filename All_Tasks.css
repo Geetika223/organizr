@@ -24,8 +24,8 @@ a {
 }
 
 header {
-    background-color: #0056D2;
-    color: #fff;
+    background-color:#000000 ;
+    color: teal;
     padding: 1rem 2rem 1rem 4rem;
     position: relative;
     z-index: 1;
@@ -43,9 +43,9 @@ header {
     top: 1rem;
     left: 1rem;
     z-index: 1001;
-    background: #0056D2;
+    background: #000000;
     border: none;
-    color: white;
+    color:teal;
     font-size: 1.5rem;
     padding: 0.5rem 0.7rem;
     cursor: pointer;
@@ -103,7 +103,7 @@ header {
 
 .task-panel h2 {
     margin-bottom: 1rem;
-    color: #0056D2;
+    color:teal ;
 }
 
 .task-list {
@@ -115,11 +115,11 @@ header {
 }
 
 .task-item {
-    background-color: #fff;
+    background-color: #000000;
     padding: 1rem;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    border-left: 4px solid #0056D2;
+    border-left: 4px solid #000000;
 }
 
 .task-item h3 {
@@ -137,41 +137,71 @@ header {
 }
 
 .tm-footer {
-    background-color: #000;
-    color: #fff;
-    padding: 2rem 1rem 1rem;
-    margin-top: auto;
-    font-size: 0.95rem;
+    background: #0c0c0e;
+    color: #f7f3ea;
+    padding: 3rem 1.5rem 1rem;
+    font-family: 'Segoe UI', Arial, sans-serif;
 }
 
+
 .tm-footer-main {
-    max-width: 1200px;
-    margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: flex-start;
     gap: 2rem;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
 }
+
 
 .tm-footer-left {
     flex: 1;
     min-width: 200px;
 }
 
+
 .tm-logo {
-    font-size: 1.3rem;
+    font-size: 1.8rem;
     font-weight: bold;
-    color: #fff;
-    margin-bottom: 1rem;
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 0.6rem;
+    color: #a6cec2;
 }
 
 .tm-logo i {
-    color: #0056D2;
+    font-size: 1.5em;
+}.tm-col h4 {
+    margin-bottom: 1rem;
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: #f8e3b0;
 }
+
+.tm-col h4 a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.tm-col h4 a:hover {
+    color: #a6cec2;
+}
+
+.tm-col a {
+    display: block;
+    margin-bottom: 0.4rem;
+    font-size: 0.95rem;
+    color: #f7f3ea;
+    text-decoration: none;
+    transition: color 0.2s ease, padding-left 0.2s ease;
+}
+
+.tm-col a:hover {
+    color: #a6cec2;
+    padding-left: 4px; 
+}
+
 
 .tm-footer-links {
     flex: 2;
@@ -210,22 +240,26 @@ header {
 }
 
 .tm-social a {
-    color: #fff;
+    color: #f7f3ea;
     font-size: 1.2rem;
+    margin-left:1rem;
     transition: color 0.3s;
 }
 
 .tm-social a:hover {
-    color: #0056D2;
+    color:#a6cec2 ;
 }
 
 .tm-footer-bottom {
-    border-top: 1px solid #333;
+    border-top: 1px solid #59595c;
     margin-top: 2rem;
-    padding-top: 1rem;
-    text-align: center;
-    font-size: 0.85rem;
-    color: #888;
+    padding-top: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
 }
 
 @media (max-width: 768px) {
