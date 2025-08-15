@@ -121,7 +121,7 @@ $result = mysqli_query($con, $sql);
                     <h4>Home</h4>
                 </a>
                 <a href="About_Us.html">About us</a><br>
-                <a href="Blog.html">Blog</a>
+                <a href="Blog.html">Blog</a><br>
                 <a href="Careers.html">Careers</a><br>
             </div>
             <div class="tm-col">
