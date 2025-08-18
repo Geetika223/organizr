@@ -149,7 +149,7 @@ if (isset($_GET['search']) && !empty(trim($_GET['search']))) {
             </div>
         </footer>
     </div>
-    <script src="sidebar.js"></script>
+    <script src="Script/sidebar.js"></script>
     <?php
     if (isset($stmt)) {
         mysqli_stmt_close($stmt);

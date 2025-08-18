@@ -329,7 +329,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </div>
     </div>
     <script src="Script/Home.js"></script>
-    <script src="sidebar.js"></script>
+    <script src="Script/sidebar.js"></script>
     <?php close_resources(null, $con); ?>
 </body>
 
