@@ -11,21 +11,10 @@
     box-sizing: border-box;
 }
 
-:root {
-    --bg-color: #1a1a2e;
-    --card-bg-color: #161616;
-    --sidebar-bg-color: #f8f9fa;
-    --text-color: #e4e4f0;
-    --accent-color: #00b894;
-    --secondary-accent: #0f3460;
-    --border-color: #3f4a6b;
-    --shadow-color: rgba(0, 0, 0, 0.2);
-}
-
 body {
     font-family: 'Segoe UI', Arial, sans-serif;
-    background-color: var(--bg-color);
-    color: var(--text-color);
+    background-color: rgb(43, 42, 42);
+    color: #00b894;
     display: flex;
     transition: all 0.3s ease;
 }
@@ -35,7 +24,7 @@ body {
 #sidebar {
     width: 250px;
     height: 100vh;
-    background: #0c0c0e;
+    background: white;
     padding: 20px;
     position: fixed;
     top: 0;
@@ -54,10 +43,10 @@ body {
     top: 20px;
     left: 20px;
     z-index: 1001;
-    background-color: var(--accent-color);
-    color: var(--text-color);
+    background-color: black;
+    color: white;
     border: none;
-    border-radius: 50%;
+    border-radius: 10%;
     width: 40px;
     height: 40px;
     cursor: pointer;
@@ -70,7 +59,7 @@ body {
 }
 
 #toggle-btn:hover {
-    background-color: #c43c53;
+    background-color: #00b894;
 }
 
 .offcanvas-body {
@@ -148,7 +137,7 @@ hr {
     width: calc(100% - 250px);
     transition: margin-left 0.3s ease-in-out;
     padding: 20px;
-}
+    }
 
 #sidebar.hide+#main-content {
     margin-left: 0;
@@ -161,10 +150,10 @@ header {
     align-items: center;
     padding: 20px 40px;
     background: #0c0c0e;
-    border-radius: 10px;
     margin-bottom: 20px;
-    box-shadow: 0 4px 10px var(--shadow-color);
-}
+border-radius: 10px;
+    box-shadow: 0 -4px 10px var(--shadow-color);
+    }
 
 .left-header {
     display: flex;
@@ -177,6 +166,7 @@ header {
     color: var(--text-color);
     display: flex;
     align-items: center;
+    border-radius: 6px;
 }
 
 .logo .fa-layer-group {
@@ -193,8 +183,8 @@ header {
 }
 
 #header-search-form input[type="text"] {
-    border: 1px solid var(--border-color);
-    background-color: var(--card-bg-color);
+    border: 1px solid black;
+    background-color: rgb(238, 230, 230);
     color: var(--text-color);
     padding: 10px 15px;
     font-size: 0.9rem;
@@ -205,9 +195,9 @@ header {
 }
 
 #header-search-form button {
-    background-color: var(--accent-color);
+    background-color: rgb(238, 230, 230);
     color: var(--text-color);
-    border: 1px solid var(--border-color);
+    border: 1px solid black;
     border-left: none;
     border-radius: 0 25px 25px 0;  /* round right */
     height: 40px;
@@ -229,7 +219,7 @@ header {
 
 
 .header-search-form button:hover {
-    background-color: #c43c53;
+    background-color: white;
 }
 
 main {
