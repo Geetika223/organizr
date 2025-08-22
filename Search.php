@@ -35,7 +35,7 @@ if (isset($_GET['search']) && !empty(trim($_GET['search']))) {
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>All Tasks - Organizr</title>
-    <link rel="stylesheet" href="Search.css">
+    <link rel="stylesheet" href="Style/Search.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         crossorigin="anonymous" />
 </head>
@@ -46,8 +46,8 @@ if (isset($_GET['search']) && !empty(trim($_GET['search']))) {
         <div class="offcanvas-body">
             <h1 class="text-xs"><i class="fa-solid fa-layer-group"></i> Organizr</h1>
             <nav>
-                <a class="iconsonbar button text-muted" href="timesheet.php">
-                    <i class="con fas fa-stopwatch p-2"></i>Timesheet
+                <a class="iconsonbar button text-muted" href="Home.php" id="open-search-modal">
+                    <i class="con fas fa-search p-2"></i>Home
                 </a>
                 <a class="iconsonbar button text-muted" href="Search.php" id="open-search-modal">
                     <i class="con fas fa-search p-2"></i>Search
@@ -70,8 +70,10 @@ if (isset($_GET['search']) && !empty(trim($_GET['search']))) {
                 <i class="fa-solid fa-layer-group"></i> Organizr
             </div>
             <div class="header-search-form">
-                <form id="header-search-form" method="GET" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
-                    <input type="text" name="search" placeholder="Search for tasks..." value="<?= htmlspecialchars($search) ?>" />
+                <form id="header-search-form" method="GET"
+                    action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+                    <input type="text" name="search" placeholder="Search for tasks..."
+                        value="<?= htmlspecialchars($search) ?>" />
                     <button type="submit"><i class="fas fa-search"></i></button>
                 </form>
             </div>
@@ -79,15 +81,16 @@ if (isset($_GET['search']) && !empty(trim($_GET['search']))) {
 
         <main>
             <div class="task-panel">
-                <h2><?php echo !empty($search) ? "Search Results for \"" . htmlspecialchars($search) . "\"" : "All Tasks"; ?></h2>
+                <h2><?php echo !empty($search) ? "Search Results for \"" . htmlspecialchars($search) . "\"" : "All Tasks"; ?>
+                </h2>
                 <?php
                 if ($result && mysqli_num_rows($result) > 0) {
                     echo '<ul class="task-list">';
                     while ($row = mysqli_fetch_assoc($result)) {
                         echo '<li class="task-item">';
-                        echo '<h3>' . htmlspecialchars($row['Title']) . '</h3>';
-                        echo '<p>' . nl2br(htmlspecialchars($row['Description'])) . '</p>';
-                        echo '<small>Due: ' . htmlspecialchars($row['Date']) . '</small>';
+                        echo '<h3>' . htmlspecialchars($row['title']) . '</h3>';
+                        echo '<p>' . nl2br(htmlspecialchars($row['description'])) . '</p>';
+                        echo '<small>Due: ' . htmlspecialchars($row['date']) . '</small>';
                         echo '</li>';
                     }
                     echo '</ul>';
@@ -101,9 +104,9 @@ if (isset($_GET['search']) && !empty(trim($_GET['search']))) {
                         echo '<ul class="task-list">';
                         while ($row = mysqli_fetch_assoc($all_tasks_result)) {
                             echo '<li class="task-item">';
-                            echo '<h3>' . htmlspecialchars($row['Title']) . '</h3>';
-                            echo '<p>' . nl2br(htmlspecialchars($row['Description'])) . '</p>';
-                            echo '<small>Due: ' . htmlspecialchars($row['Date']) . '</small>';
+                            echo '<h3>' . htmlspecialchars($row['title']) . '</h3>';
+                            echo '<p>' . nl2br(htmlspecialchars($row['description'])) . '</p>';
+                            echo '<small>Due: ' . htmlspecialchars($row['date']) . '</small>';
                             echo '</li>';
                         }
                         echo '</ul>';

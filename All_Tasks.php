@@ -7,7 +7,7 @@ $con = mysqli_connect($server, $username, $password, $database);
 if (!$con) {
     die("Connection failed: " . mysqli_connect_error());
 }
-$sql = "SELECT * FROM task ORDER BY Date ASC";
+$sql = "SELECT * FROM task ORDER BY date ASC";
 $result = mysqli_query($con, $sql);
 ?>
 
@@ -18,7 +18,7 @@ $result = mysqli_query($con, $sql);
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>All Tasks - Organizr</title>
-    <link rel="stylesheet" href="All_Tasks.css" />
+    <link rel="stylesheet" href="Style/All_Tasks.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         crossorigin="anonymous" />
 </head>
@@ -30,8 +30,8 @@ $result = mysqli_query($con, $sql);
     <div id="sidebar" class="hide">
         <div class="offcanvas-body">
             <h1 class="text-xs"><i class="fa-solid fa-layer-group"></i> Organizr</h1>
-            <a class="iconsonbar button text-muted" href="timesheet.php">
-                <i class="con fas fa-stopwatch p-2"></i>Timesheet
+            <a class="iconsonbar button text-muted" href="Home.php" id="open-search-modal">
+                <i class="con fas fa-search p-2"></i>Home
             </a>
             <a class="iconsonbar button text-muted" href="Search.php" id="open-search-modal">
                 <i class="con fas fa-search p-2"></i>Search
@@ -62,9 +62,19 @@ $result = mysqli_query($con, $sql);
                     <ul class="task-list">
                         <?php while ($row = mysqli_fetch_assoc($result)): ?>
                             <li class="task-item">
-                                <h3><?= htmlspecialchars($row['Title']) ?></h3>
-                                <p><?= nl2br(htmlspecialchars($row['Description'])) ?></p>
-                                <small>Due: <?= htmlspecialchars($row['Date']) ?></small>
+                                <h3><?= htmlspecialchars($row['title']) ?></h3>
+                                <p><?= nl2br(htmlspecialchars($row['description'])) ?></p>
+                                <small>Due: <?= htmlspecialchars($row['date']) ?></small>
+                                <hr>
+                                <a href="update.php?id=<?= $row['id'] ?>">
+                                    <button
+                                        style="padding:8px 16px; margin:5px; border:none; border-radius:6px; font-size:14px; font-weight:500; cursor:pointer; background-color:#4CAF50; color:white;">
+                                        Update</button></a>
+                                <a href="delete.php?id=<?= $row['id'] ?>"
+                                    onclick="return confirm('Are you sure you want to delete this task?');">
+                                    <button
+                                        style="padding:8px 16px; margin:5px; border:none; border-radius:6px; font-size:14px; font-weight:500; cursor:pointer; background-color:#f44336; color:white;">
+                                        Delete</button></a>
                             </li>
                         <?php endwhile; ?>
                     </ul>
