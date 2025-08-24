@@ -120,34 +120,30 @@ if (isset($_GET['search']) && !empty(trim($_GET['search']))) {
 
         <footer class="tm-footer">
             <div class="tm-footer-main">
-                <div class="tm-footer-left">
-                    <div class="tm-logo">
-                        <i class="fa-solid fa-layer-group"></i> Organizr
-                    </div>
+                <div class="tm-logo">
+                    <i class="fa-solid fa-layer-group"></i>Organizr
                 </div>
-                <div class="tm-footer-links">
-                    <div class="tm-col">
-                        <a href="Home.php">
-                            <h4>Home</h4>
-                        </a>
-                        <a href="About_Us.html">About us</a><br>
-                        <a href="Blog.html">Blog</a><br>
-                        <a href="Careers.html">Careers</a>
-                    </div>
-                    <div class="tm-col">
-                        <h4>Support</h4><br>
-                        <a href="Contact.php">Contact</a><br>
-                        <a href="Help_Centre.html">Help Center</a><br>
-                        <a href="Privacy_Policy.html">Privacy Policy</a>
-                    </div>
+                <div class="tm-col">
+                    <a href="Home.php">
+                        <h4>Home</h4><br>
+                    </a>
+                    <a href="About_Us.html">About us</a><br>
+                    <a href="Blog.html">Blog</a><br>
+                    <a href="Careers.html">Careers</a><br>
+                </div>
+                <div class="tm-col">
+                    <h4>Support</h4><br>
+                    <a href="Contact.php">Contact</a><br>
+                    <a href="Help_Centre.html">Help Center</a><br>
+                    <a href="Privacy_Policy.html">Privacy Policy</a>
                 </div>
             </div>
-            <div class="tm-footer-right tm-bottom">
+            <div class="tm-footer-bottom">
                 <p>&copy; 2025 tm. All rights reserved.</p>
                 <div class="tm-social">
-                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
                 </div>
             </div>
         </footer>
